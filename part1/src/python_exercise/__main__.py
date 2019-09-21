@@ -1,4 +1,5 @@
 import click
+from django.core import management
 from cfn_flip import to_json
 from commons import commons
 
@@ -28,3 +29,11 @@ def yaml_to_json(yaml_file):
             click.echo('File written successfully')
         except Exception as e:
             click.echo(e)
+
+
+@main.command()
+@click.argument('project_name')
+def create_django_app(project_name):
+    if not commons.is_palindrome(project_name):
+        raise Exception('Project name is not a palindrome')
+    management.call_command('startproject', project_name, directory='part2')
