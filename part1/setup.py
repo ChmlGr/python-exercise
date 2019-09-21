@@ -14,7 +14,7 @@ setup(
     install_requires = [
     ],
     entry_points={
-        'console_script': [
+        'console_scripts': [
             'python-exercise = python_exercise.__main__:main'
         ]
     }
