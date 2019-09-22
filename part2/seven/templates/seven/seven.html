@@ -1,0 +1,11 @@
+{% include 'seven/form.html' %}
+
+{% if messages %}
+    {% for message in messages %}
+        {% if message.level == 50 %}
+            <p>{{ message }}</p>
+            <p>Try again!</p>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
