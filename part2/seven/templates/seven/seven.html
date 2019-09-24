@@ -3,9 +3,10 @@
 {% if messages %}
     {% for message in messages %}
         {% if message.level == 50 %}
-            <p>{{ message }}</p>
-            <p>Try again!</p>
+            <p>Found this pairs: {{ message }}</p>
         {% endif %}
     {% endfor %}
+{% else %}
+    <p> No pairs found </p>
 {% endif %}
-
+<p>Try again!</p>
