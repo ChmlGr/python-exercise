@@ -1,2 +1,3 @@
-def is_palindrome(word):
-    return word == word[::-1]
+def is_palindrome(phrase):
+    cleaned = [c.casefold() for c in phrase if c.isalpha()]
+    return cleaned == cleaned[::-1]
